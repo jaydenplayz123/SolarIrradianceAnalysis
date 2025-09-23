@@ -1,0 +1,43 @@
+[flake8]
+# Base configuration
+max-line-length = 88
+max-complexity = 10
+select = E,W,F,C,N
+ignore = 
+    # E203: whitespace before ':' (conflicts with black)
+    E203,
+    # E501: line too long (handled by black)
+    E501,
+    # W503: line break before binary operator (conflicts with black)
+    W503,
+    # F401: imported but unused (handled by isort)
+    F401
+
+# Exclude directories
+exclude = 
+    .git,
+    __pycache__,
+    .venv,
+    .eggs,
+    *.egg,
+    build,
+    dist,
+    backup,
+    reports
+
+# Per-file ignores
+per-file-ignores = 
+    # Tests can have longer lines and unused imports
+    tests/*:E501,F401,F811
+    # Init files can have unused imports
+    __init__.py:F401
+    # Backup code can be ignored
+    backup/*:E,W,F,C,N
+
+# Docstring configuration
+docstring-convention = google
+require-return-section-when-returning-nothing = False
+
+# Import order configuration
+import-order-style = google
+application-import-names = src

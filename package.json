@@ -1,0 +1,23 @@
+{
+  "name": "solar-irradiance-analysis",
+  "version": "1.0.0",
+  "description": "Professional toolkit for analyzing NASA POWER satellite-derived solar irradiance data",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.md\" \"**/*.json\" \"**/*.yaml\"",
+    "format:check": "prettier --check \"**/*.md\" \"**/*.json\" \"**/*.yaml\""
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  },
+  "keywords": [
+    "solar",
+    "irradiance",
+    "nasa-power",
+    "climate-analysis",
+    "data-analysis",
+    "renewable-energy"
+  ],
+  "author": "Solar Analysis Team",
+  "license": "MIT"
+}
